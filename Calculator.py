@@ -99,4 +99,11 @@ Bc.grid(row=1, column=1, ipady=7)
 Bb = ttk.Button(root, text="exit", width=6, command=root.destroy)
 Bb.grid(row=1, column=0, ipady=7)
 
+if(Output.get()==""):
+	Bp.config(state="disabled")
+	Bmi.config(state="disabled")
+	Bmu.config(state="disabled")
+	Bd.config(state="disabled")
+	Bpe.config(state="disabled")
+
 root.mainloop()
