@@ -40,9 +40,12 @@ def clear():
 
 # Function to display the result of the expression
 def result():
-	s = Output.get( )
-	Output.delete(0, END)
-	Output.insert(0, eval(s))
+	try:		
+		s = Output.get( )
+		Output.delete(0, END)
+		Output.insert(0, eval(s))
+	except:
+		Output.insert(0,"ERROR")
 
 # Creating and Positioning our entry widgit to display everything
 Output = Entry(root, width=30)
