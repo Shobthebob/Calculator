@@ -30,6 +30,11 @@ def command(n1):
 		Bdot.config(state="disabled")
 	if(cur!="") and ((cur[-1]=='+') or (cur[-1]=='-') or (cur[-1]=='*') or (cur[-1]=='/') or (cur[-1]=='%')):
 		Bdot.config(state="enabled")
+        
+    # To make sure no one divides a number by 0
+	B0.config(state="enabled")
+	if(n1=="/") or (n1=="%"):
+		B0.config(state="disabled")
 			
 	Output.delete(0, END)
 	Output.insert(0, str(cur) + str(n1))
@@ -40,12 +45,9 @@ def clear():
 
 # Function to display the result of the expression
 def result():
-	try:		
-		s = Output.get( )
-		Output.delete(0, END)
-		Output.insert(0, eval(s))
-	except:
-		Output.insert(0,"ERROR")
+	s = Output.get( )
+	Output.delete(0, END)
+	Output.insert(0, eval(s))
 
 # Creating and Positioning our entry widgit to display everything
 Output = Entry(root, width=30)
@@ -102,6 +104,7 @@ Bc.grid(row=1, column=1, ipady=7)
 Bb = ttk.Button(root, text="exit", width=6, command=root.destroy)
 Bb.grid(row=1, column=0, ipady=7)
 
+# To make sure no one starts with an operator
 if(Output.get()==""):
 	Bp.config(state="disabled")
 	Bmi.config(state="disabled")
