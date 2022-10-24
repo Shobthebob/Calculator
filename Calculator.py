@@ -30,11 +30,6 @@ def command(n1):
 		Bdot.config(state="disabled")
 	if(cur!="") and ((cur[-1]=='+') or (cur[-1]=='-') or (cur[-1]=='*') or (cur[-1]=='/') or (cur[-1]=='%')):
 		Bdot.config(state="enabled")
-        
-    # To make sure no one divides a number by 0
-	B0.config(state="enabled")
-	if(n1=="/") or (n1=="%"):
-		B0.config(state="disabled")
 			
 	Output.delete(0, END)
 	Output.insert(0, str(cur) + str(n1))
