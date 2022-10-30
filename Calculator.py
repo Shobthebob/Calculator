@@ -12,15 +12,11 @@ def command(n1):
 	
 	# To make sure no one uses an operator twice
 	if(not str(n1).isnumeric()):
-		Bp.config(state="disabled")
-		Bmi.config(state="disabled")
 		Bmu.config(state="disabled")
 		Bd.config(state="disabled")
 		Bpe.config(state="disabled")
 		Bdot.config(state="disabled")
 	else:
-		Bp.config(state="enabled")
-		Bmi.config(state="enabled")
 		Bmu.config(state="enabled")
 		Bd.config(state="enabled")
 		Bpe.config(state="enabled")
@@ -104,8 +100,6 @@ Bb.grid(row=1, column=0, ipady=7)
 
 # To make sure no one starts with an operator
 if(Output.get()==""):
-	Bp.config(state="disabled")
-	Bmi.config(state="disabled")
 	Bmu.config(state="disabled")
 	Bd.config(state="disabled")
 	Bpe.config(state="disabled")
