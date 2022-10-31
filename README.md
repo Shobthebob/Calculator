@@ -1,7 +1,7 @@
 # Calculator
 GUI Calculator 
 
-The three caculators are working on the same code, the only difference is their layout.
+The three caculators are working on the same code, the only difference is their layout. <br/>
 The names for these have been inspired from the C language triology (C, C++, C#)
 
 # Calculator.py:
