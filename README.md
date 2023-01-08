@@ -2,7 +2,8 @@
 GUI Calculator 
 
 The three caculators are working on the same code, the only difference is their layout. <br/>
-The names for these have been inspired from the C language triology (C, C++, C#)
+The names for these have been inspired from the C language triology (C, C++, C#)<br/>
+Please note that the UI will be different for each Operating System
 
 # Calculator.py:
 For this version I have used the standard tkinter module<br/>
